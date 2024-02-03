@@ -1,13 +1,15 @@
 package com.lebanking.api.domain.model;
 
-import com.lebanking.api.domain.model.fee.DepositFee;
-import com.lebanking.api.domain.model.fee.FeeStrategy;
-import com.lebanking.api.domain.model.fee.WithdrawalFee;
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "tb_company")
 public class Company {
@@ -22,17 +24,8 @@ public class Company {
 
     private String contact;
 
-    private BigDecimal balance;
+    private BigDecimal withdrawalFee;
 
-    private FeeStrategy withdrawalFeeStrategy = new WithdrawalFee();
+    private BigDecimal depositFeeStrategy;
 
-    private FeeStrategy depositFeeStrategy = new DepositFee();
-
-    public BigDecimal calculateWithdrawalFee(BigDecimal amount) {
-        return withdrawalFeeStrategy.calculateFee(amount);
-    }
-
-    public BigDecimal calculateDepositFee(BigDecimal amount) {
-        return depositFeeStrategy.calculateFee(amount);
-    }
 }
