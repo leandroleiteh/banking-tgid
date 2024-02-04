@@ -1,4 +1,4 @@
-package com.lebanking.api.application.exception;
+package com.lebanking.api.common.exception;
 
 import java.io.Serial;
 
