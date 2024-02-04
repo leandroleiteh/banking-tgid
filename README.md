@@ -38,7 +38,8 @@ Esta é uma API REST desenvolvida para o gerenciamento de transações bancária
 3. Abra o projeto em sua IDE favorita.
 5. Execute a aplicação Spring Boot.
 6. Acesse a documentação da API no seu navegador através de `http://localhost:8080/swagger-ui.html`.
-7. Utilize algum testador de requisição (POSTMAN / INSOMNIA) para realizar requisições aos endpoints.
+7. Coloque seu email quando cadastrar o cliente, para receber o email de transações
+8. Utilize algum testador de requisição (POSTMAN / INSOMNIA) para realizar requisições aos endpoints.
 
 
 ### Exemplo de Requisição para criar uma Empresa (POST)
