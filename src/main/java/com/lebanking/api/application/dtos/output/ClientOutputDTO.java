@@ -1,4 +1,4 @@
-package com.lebanking.api.application.dtos;
+package com.lebanking.api.application.dtos.output;
 
 import java.math.BigDecimal;
 import java.util.Date;
