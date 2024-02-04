@@ -1,6 +1,6 @@
-package com.lebanking.api.infrastructure.documentation;
+package com.lebanking.api.common.documentation;
 
-import com.ekan.dev.api.exceptionhandler.Problem;
+import com.lebanking.api.application.exceptionhandler.Problem;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -32,16 +32,20 @@ public class SpringDocConfig {
     public OpenAPI baseOpenApi() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Ekan - Teste desenvolvedor Java jr")
+                        .title("TGID - Teste desenvolvedor Java Jr")
                         .version("1.0.0")
-                        .description("API REST para gerenciamento de Beneficiários e Documentos")
+                        .description("API para transações")
                         .contact(new Contact()
                                 .name("Leandro Leite")
                                 .email("leandroluz201616@gmail.com")
                         )
                 )
                 .tags(List.of(
-                                new Tag().name("Benefiary").description("API de Beneficiários")
+                                new Tag().name("Transactions").description("API de Transaçœs"),
+                                new Tag().name("Client").description("API de Cadastro de Clientes"),
+                                new Tag().name("Companys").description("API de Cadastro de Empresas")
+
+
                         )
                 )
                 .components(
